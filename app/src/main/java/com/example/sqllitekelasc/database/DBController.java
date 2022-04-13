@@ -38,6 +38,22 @@ public class DBController extends SQLiteOpenHelper {
         basisdata.close();
     }
 
+    public void UpdateData(HashMap<String,String> dataQuery){
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues nilaiUp = new ContentValues();
+        nilaiUp.put("nama", dataQuery.get("nama"));
+        nilaiUp.put("telepon", dataQuery.get("telepon"));
+
+        db.update("teman", nilaiUp, "id=?", new String[]{dataQuery.get("id")});
+        db.close();
+    }
+
+    public void DeleteData (HashMap<String,String> dataQuery){
+        SQLiteDatabase dbd = getWritableDatabase();
+        dbd.delete("teman", "id=?", new String[]{dataQuery.get("id")});
+        dbd.close();
+    }
+
     public ArrayList<HashMap<String,String>> getAllTeman(){
         ArrayList<HashMap<String,String>> dataTeman;
         dataTeman = new ArrayList<HashMap<String, String>>();
@@ -48,7 +64,7 @@ public class DBController extends SQLiteOpenHelper {
         if (cursor.moveToFirst()){
             do{
                 HashMap<String,String> map = new HashMap<>();
-                map.put("id",cursor.getString(0));
+
 
                 map.put("id", cursor.getString(0));
                 map.put("nama", cursor.getString(1));

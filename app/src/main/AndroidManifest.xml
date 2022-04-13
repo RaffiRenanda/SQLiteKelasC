@@ -11,6 +11,8 @@
         android:theme="@style/Theme.SQLLiteKelasC">
         <activity android:name=".DataBaru"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".model.edit_teman"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
