@@ -32,7 +32,7 @@ public class DataBaru extends AppCompatActivity {
     private Button Simpanbtn;
     String nm, tl;
     int success;
-    private static  String url_insert = "http://10.0.2.2/umyTI/tambahtm.php";
+    private static  String url_insert = "http://10.0.2.2/umyTI/tambahth.php";
     public static final String TAG = DataBaru.class.getSimpleName();
     public static final String TAG_SUCCES = "success";
 
