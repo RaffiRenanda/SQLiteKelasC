@@ -40,7 +40,7 @@ public class edit_teman extends Activity {
     DBController controller = new DBController(this);
     int sukses;
 
-    private static  String url_update = "http://10.0.2.2/umyTI/updatetm.php";
+    private static  String url_update = "https://20200140020.praktikumtiumy.com/updatetm.php";
     public static final String TAG = edit_teman.class.getSimpleName();
     public static final String TAG_SUCCES = "success";
 
